@@ -11,18 +11,24 @@
         <main>
             <section>
                 <h2>Cadastre o seu currículo</h2>
-                <form action="#" method="post">
+                <form action="https://postman-echo.com/post" method="post" enctype="multipart/form-data">
                     <p>Preencha o formulário abaixo para se candidatar á vaga.</p>
                     <fieldset>
                         <legend>Dados Pessoais</legend>
+                        
+                        <div>
+                            <label for="foto_id">Foto:</label>
+                            <input id="foto_id" name="foto" type="file" accept="image/*">
+                        </div>
+
                         <div>
                             <label for="nome_id">Nome completo:</label>
-                            <input id="nome_id" name="nome" type="text">
+                            <input id="nome_id" name="nome" type="text" placeholder="Rogério da Silva">
                         </div>
 
                         <div>
                             <label for="telefone_id">Telefone:</label>
-                            <input id="telefone_id" name="telefone" type="tel">
+                            <input id="telefone_id" name="telefone" type="tel" required>
                         </div>
 
                         <div>
@@ -56,6 +62,30 @@
                         <legend>Resumo</legend>
                         <div>
                             
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Tecnologias que domina:</legend>
+                        <div>
+                            <input id="tec_html_id"
+                                   name="tecnologias"
+                                   type="checkbox"
+                                   value="html">
+                            <label for="tec_html_id">HTML</label>
+                        </div>
+                        <div>
+                            <input id="tec_css_id"
+                                   name="tecnologias"
+                                   type="checkbox"
+                                   value="css">
+                            <label for="tec_css_id">CSS</label>
+                        </div>
+                        <div>
+                            <input id="tec_js_id"
+                                   name="tecnologias"
+                                   type="checkbox"
+                                   value="js">
+                            <label for="tec_js_id">JS</label>
                         </div>
                     </fieldset>
                     <fieldset>
